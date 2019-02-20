@@ -1,0 +1,716 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.7">
+	<Title>
+		<v8:item>
+			<v8:lang>ru</v8:lang>
+			<v8:content>Реестры платежей</v8:content>
+		</v8:item>
+	</Title>
+	<AutoTitle>false</AutoTitle>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1">
+		<Autofill>false</Autofill>
+	</AutoCommandBar>
+	<Events>
+		<Event name="OnOpen">ПриОткрытии</Event>
+		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
+		<Event name="OnClose">ПриЗакрытии</Event>
+	</Events>
+	<ChildItems>
+		<UsualGroup name="ГруппаШапка" id="1">
+			<Visible>false</Visible>
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Шапка</v8:content>
+				</v8:item>
+			</Title>
+			<HorizontalStretch>true</HorizontalStretch>
+			<Group>Horizontal</Group>
+			<HorizontalAlign>Center</HorizontalAlign>
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="ГруппаШапкаРасширеннаяПодсказка" id="2"/>
+			<ChildItems>
+				<RadioButtonField name="ТекущийТипОтображения" id="3">
+					<DataPath>ТекущийТипОтображения</DataPath>
+					<TitleLocation>None</TitleLocation>
+					<GroupHorizontalAlign>Center</GroupHorizontalAlign>
+					<RadioButtonType>Tumbler</RadioButtonType>
+					<ChoiceList>
+						<xr:Item>
+							<xr:Presentation/>
+							<xr:CheckState>0</xr:CheckState>
+							<xr:Value xsi:type="FormChoiceListDesTimeValue">
+								<Presentation>
+									<v8:item>
+										<v8:lang>ru</v8:lang>
+										<v8:content>Текущие</v8:content>
+									</v8:item>
+								</Presentation>
+								<Value xsi:type="xs:decimal">0</Value>
+							</xr:Value>
+						</xr:Item>
+						<xr:Item>
+							<xr:Presentation/>
+							<xr:CheckState>0</xr:CheckState>
+							<xr:Value xsi:type="FormChoiceListDesTimeValue">
+								<Presentation>
+									<v8:item>
+										<v8:lang>ru</v8:lang>
+										<v8:content>Архив</v8:content>
+									</v8:item>
+								</Presentation>
+								<Value xsi:type="xs:decimal">1</Value>
+							</xr:Value>
+						</xr:Item>
+					</ChoiceList>
+					<Font ref="style:TextFont" kind="StyleItem"/>
+					<ContextMenu name="ТекущийТипОтображенияКонтекстноеМеню" id="4"/>
+					<ExtendedTooltip name="ТекущийТипОтображенияРасширеннаяПодсказка" id="5"/>
+					<Events>
+						<Event name="OnChange">ТекущийТипОтображенияПриИзменении</Event>
+					</Events>
+				</RadioButtonField>
+			</ChildItems>
+		</UsualGroup>
+		<Pages name="ГруппаСтраницы" id="6">
+			<PagesRepresentation>None</PagesRepresentation>
+			<ExtendedTooltip name="ГруппаСтраницыРасширеннаяПодсказка" id="7"/>
+			<ChildItems>
+				<Page name="СтраницаСписокЗадач" id="8">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Страница список задач</v8:content>
+						</v8:item>
+					</Title>
+					<ShowTitle>false</ShowTitle>
+					<ExtendedTooltip name="СтраницаСписокЗадачРасширеннаяПодсказка" id="9"/>
+					<ChildItems>
+						<Table name="СписокЗадач" id="10">
+							<Representation>List</Representation>
+							<CommandBarLocation>None</CommandBarLocation>
+							<ChangeRowSet>false</ChangeRowSet>
+							<ChangeRowOrder>false</ChangeRowOrder>
+							<SelectionMode>SingleRow</SelectionMode>
+							<Header>false</Header>
+							<HorizontalLines>false</HorizontalLines>
+							<VerticalLines>false</VerticalLines>
+							<UseAlternationRowColor>true</UseAlternationRowColor>
+							<EnableStartDrag>true</EnableStartDrag>
+							<FileDragMode>AsFile</FileDragMode>
+							<DataPath>СписокЗадач</DataPath>
+							<SearchStringLocation>None</SearchStringLocation>
+							<AutoRefresh>true</AutoRefresh>
+							<AutoRefreshPeriod>59</AutoRefreshPeriod>
+							<Period>
+								<v8:variant xsi:type="v8:StandardPeriodVariant">Custom</v8:variant>
+								<v8:startDate>0001-01-01T00:00:00</v8:startDate>
+								<v8:endDate>0001-01-01T00:00:00</v8:endDate>
+							</Period>
+							<ChoiceFoldersAndItems>Items</ChoiceFoldersAndItems>
+							<RestoreCurrentRow>false</RestoreCurrentRow>
+							<TopLevelParent xsi:nil="true"/>
+							<ShowRoot>true</ShowRoot>
+							<AllowRootChoice>false</AllowRootChoice>
+							<UpdateOnDataChange>Auto</UpdateOnDataChange>
+							<ContextMenu name="СписокЗадачКонтекстноеМеню" id="11"/>
+							<AutoCommandBar name="СписокЗадачКоманднаяПанель" id="12">
+								<Autofill>false</Autofill>
+							</AutoCommandBar>
+							<ExtendedTooltip name="СписокЗадачРасширеннаяПодсказка" id="13"/>
+							<SearchStringAddition name="СписокЗадачСтрокаПоиска" id="14">
+								<Enabled>false</Enabled>
+								<AdditionSource>
+									<Item>СписокЗадач</Item>
+									<Type>SearchStringRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="СписокЗадачСтрокаПоискаКонтекстноеМеню" id="15"/>
+								<ExtendedTooltip name="СписокЗадачСтрокаПоискаРасширеннаяПодсказка" id="16"/>
+							</SearchStringAddition>
+							<ViewStatusAddition name="СписокЗадачСостояниеПросмотра" id="17">
+								<Enabled>false</Enabled>
+								<AdditionSource>
+									<Item>СписокЗадач</Item>
+									<Type>ViewStatusRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="СписокЗадачСостояниеПросмотраКонтекстноеМеню" id="18"/>
+								<ExtendedTooltip name="СписокЗадачСостояниеПросмотраРасширеннаяПодсказка" id="19"/>
+							</ViewStatusAddition>
+							<SearchControlAddition name="СписокЗадачУправлениеПоиском" id="20">
+								<Enabled>false</Enabled>
+								<AdditionSource>
+									<Item>СписокЗадач</Item>
+									<Type>SearchControl</Type>
+								</AdditionSource>
+								<ContextMenu name="СписокЗадачУправлениеПоискомКонтекстноеМеню" id="21"/>
+								<ExtendedTooltip name="СписокЗадачУправлениеПоискомРасширеннаяПодсказка" id="22"/>
+							</SearchControlAddition>
+							<ChildItems>
+								<ColumnGroup name="Индикаторы" id="37">
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Индикаторы</v8:content>
+										</v8:item>
+									</Title>
+									<ToolTip>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Индикаторы</v8:content>
+										</v8:item>
+									</ToolTip>
+									<Width>1</Width>
+									<HorizontalStretch>false</HorizontalStretch>
+									<FixingInTable>Left</FixingInTable>
+									<ExtendedTooltip name="ИндикаторыРасширеннаяПодсказка" id="38"/>
+									<ChildItems>
+										<PictureField name="Просрочено" id="42">
+											<DataPath>СписокЗадач.Просрочено</DataPath>
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>1</v8:content>
+												</v8:item>
+											</Title>
+											<HorizontalAlign>Left</HorizontalAlign>
+											<FooterHorizontalAlign>Left</FooterHorizontalAlign>
+											<Width>1</Width>
+											<Height>1</Height>
+											<PictureSize>Proportionally</PictureSize>
+											<ValuesPicture>
+												<xr:Ref>CommonPicture.КоллекцияПросроченоНовая</xr:Ref>
+												<xr:LoadTransparent>true</xr:LoadTransparent>
+											</ValuesPicture>
+											<FileDragMode>AsFile</FileDragMode>
+											<ContextMenu name="ПросроченоКонтекстноеМеню" id="43"/>
+											<ExtendedTooltip name="ПросроченоРасширеннаяПодсказка" id="44"/>
+										</PictureField>
+										<PictureField name="ЕстьВложения" id="39">
+											<DataPath>СписокЗадач.ЕстьВложения</DataPath>
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>1</v8:content>
+												</v8:item>
+											</Title>
+											<HorizontalAlign>Left</HorizontalAlign>
+											<FooterHorizontalAlign>Left</FooterHorizontalAlign>
+											<Width>1</Width>
+											<Height>1</Height>
+											<PictureSize>Proportionally</PictureSize>
+											<ValuesPicture>
+												<xr:Ref>CommonPicture.ИконкаВложения</xr:Ref>
+												<xr:LoadTransparent>true</xr:LoadTransparent>
+											</ValuesPicture>
+											<FileDragMode>AsFile</FileDragMode>
+											<ContextMenu name="ЕстьВложенияКонтекстноеМеню" id="40"/>
+											<ExtendedTooltip name="ЕстьВложенияРасширеннаяПодсказка" id="41"/>
+										</PictureField>
+									</ChildItems>
+								</ColumnGroup>
+								<ColumnGroup name="СтрокиДанных" id="35">
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Строки данных</v8:content>
+										</v8:item>
+									</Title>
+									<ToolTip>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Строки данных</v8:content>
+										</v8:item>
+									</ToolTip>
+									<ExtendedTooltip name="СтрокиДанныхРасширеннаяПодсказка" id="36"/>
+									<ChildItems>
+										<ColumnGroup name="СтрокаДанныхПервая" id="45">
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Строка данных первая</v8:content>
+												</v8:item>
+											</Title>
+											<ToolTip>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Строка данных первая</v8:content>
+												</v8:item>
+											</ToolTip>
+											<Group>Horizontal</Group>
+											<ExtendedTooltip name="СтрокаДанныхПерваяРасширеннаяПодсказка" id="46"/>
+											<ChildItems>
+												<LabelField name="СписокЗадачОрганизация" id="26">
+													<DataPath>СписокЗадач.Организация</DataPath>
+													<HorizontalAlign>Left</HorizontalAlign>
+													<VerticalAlign>Top</VerticalAlign>
+													<FooterHorizontalAlign>Left</FooterHorizontalAlign>
+													<Height>1</Height>
+													<VerticalStretch>false</VerticalStretch>
+													<Font ref="sys:DefaultGUIFont" kind="WindowsFont"/>
+													<ContextMenu name="СписокЗадачОрганизацияКонтекстноеМеню" id="27"/>
+													<ExtendedTooltip name="СписокЗадачОрганизацияРасширеннаяПодсказка" id="28"/>
+												</LabelField>
+												<LabelField name="Сумма" id="97">
+													<DataPath>СписокЗадач.Сумма</DataPath>
+													<Format>
+														<v8:item>
+															<v8:lang>ru</v8:lang>
+															<v8:content>ЧЦ=15; ЧДЦ=2</v8:content>
+														</v8:item>
+													</Format>
+													<ContextMenu name="СуммаКонтекстноеМеню" id="98"/>
+													<ExtendedTooltip name="СуммаРасширеннаяПодсказка" id="99"/>
+												</LabelField>
+											</ChildItems>
+										</ColumnGroup>
+										<ColumnGroup name="СтрокаДанныхВторая" id="47">
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Строка данных вторая</v8:content>
+												</v8:item>
+											</Title>
+											<ToolTip>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Строка данных вторая</v8:content>
+												</v8:item>
+											</ToolTip>
+											<Group>Horizontal</Group>
+											<ExtendedTooltip name="СтрокаДанныхВтораяРасширеннаяПодсказка" id="48"/>
+											<ChildItems>
+												<LabelField name="СписокЗадачИнициатор" id="23">
+													<DataPath>СписокЗадач.Инициатор</DataPath>
+													<HorizontalAlign>Left</HorizontalAlign>
+													<VerticalAlign>Bottom</VerticalAlign>
+													<FooterHorizontalAlign>Left</FooterHorizontalAlign>
+													<Height>1</Height>
+													<HorizontalStretch>true</HorizontalStretch>
+													<VerticalStretch>false</VerticalStretch>
+													<TextColor>web:DarkGray</TextColor>
+													<Font ref="sys:DefaultGUIFont" kind="WindowsFont"/>
+													<ContextMenu name="СписокЗадачИнициаторКонтекстноеМеню" id="24"/>
+													<ExtendedTooltip name="СписокЗадачИнициаторРасширеннаяПодсказка" id="25"/>
+												</LabelField>
+												<LabelField name="СписокЗадачДата" id="49">
+													<DataPath>СписокЗадач.Дата</DataPath>
+													<HorizontalAlign>Right</HorizontalAlign>
+													<VerticalAlign>Bottom</VerticalAlign>
+													<HeaderHorizontalAlign>Right</HeaderHorizontalAlign>
+													<FooterHorizontalAlign>Right</FooterHorizontalAlign>
+													<Height>1</Height>
+													<HorizontalStretch>true</HorizontalStretch>
+													<Format>
+														<v8:item>
+															<v8:lang>ru</v8:lang>
+															<v8:content>ДФ=dd.MM.yyyy</v8:content>
+														</v8:item>
+													</Format>
+													<TextColor>web:Gray</TextColor>
+													<Font ref="sys:DefaultGUIFont" kind="WindowsFont"/>
+													<ContextMenu name="СписокЗадачДатаКонтекстноеМеню" id="50"/>
+													<ExtendedTooltip name="СписокЗадачДатаРасширеннаяПодсказка" id="51"/>
+												</LabelField>
+											</ChildItems>
+										</ColumnGroup>
+									</ChildItems>
+								</ColumnGroup>
+							</ChildItems>
+						</Table>
+					</ChildItems>
+				</Page>
+				<Page name="СтраницаВсеЗадачиЗавершены" id="52">
+					<ShowTitle>false</ShowTitle>
+					<ExtendedTooltip name="СтраницаВсеЗадачиЗавершеныРасширеннаяПодсказка" id="53"/>
+					<ChildItems>
+						<LabelDecoration name="ДекорацияОтступ1" id="54">
+							<VerticalStretch>true</VerticalStretch>
+							<ContextMenu name="ДекорацияОтступ1КонтекстноеМеню" id="55"/>
+							<ExtendedTooltip name="ДекорацияОтступ1РасширеннаяПодсказка" id="56"/>
+						</LabelDecoration>
+						<UsualGroup name="Группа1" id="60">
+							<Group>Horizontal</Group>
+							<Representation>None</Representation>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="Группа1РасширеннаяПодсказка" id="61"/>
+							<ChildItems>
+								<UsualGroup name="Группа2" id="62">
+									<GroupHorizontalAlign>Center</GroupHorizontalAlign>
+									<GroupVerticalAlign>Center</GroupVerticalAlign>
+									<Group>Vertical</Group>
+									<HorizontalAlign>Center</HorizontalAlign>
+									<VerticalAlign>Center</VerticalAlign>
+									<Representation>None</Representation>
+									<ExtendedTooltip name="Группа2РасширеннаяПодсказка" id="63"/>
+									<ChildItems>
+										<LabelDecoration name="Декорация1" id="64">
+											<HorizontalStretch>true</HorizontalStretch>
+											<VerticalStretch>false</VerticalStretch>
+											<Title formatted="true">
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>&lt;img 0:6f2a40b3-daa2-4532-a9eb-f82aa706ff35/&gt;
+Все &lt;b&gt;задачи &lt;/&gt;завершены.
+
+&lt;link v8config://309265a3-4452-43f1-a489-297c04e4b893/ПерейтиВАрхив&gt;Перейти в архив&lt;/&gt; .</v8:content>
+												</v8:item>
+											</Title>
+											<GroupHorizontalAlign>Center</GroupHorizontalAlign>
+											<GroupVerticalAlign>Center</GroupVerticalAlign>
+											<HorizontalAlign>Center</HorizontalAlign>
+											<VerticalAlign>Center</VerticalAlign>
+											<ContextMenu name="Декорация1КонтекстноеМеню" id="65"/>
+											<ExtendedTooltip name="Декорация1РасширеннаяПодсказка" id="66"/>
+										</LabelDecoration>
+									</ChildItems>
+								</UsualGroup>
+							</ChildItems>
+						</UsualGroup>
+						<LabelDecoration name="ДекорацияОтступ2" id="57">
+							<VerticalStretch>true</VerticalStretch>
+							<ContextMenu name="ДекорацияОтступ2КонтекстноеМеню" id="58"/>
+							<ExtendedTooltip name="ДекорацияОтступ2РасширеннаяПодсказка" id="59"/>
+						</LabelDecoration>
+					</ChildItems>
+				</Page>
+			</ChildItems>
+		</Pages>
+		<UsualGroup name="ГруппаКомандыФормы" id="67">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа команды формы</v8:content>
+				</v8:item>
+			</Title>
+			<Group>Horizontal</Group>
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="ГруппаКомандыФормыРасширеннаяПодсказка" id="68"/>
+			<ChildItems>
+				<Pages name="ГруппаКнопкаОбновить" id="69">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа кнопка обновить</v8:content>
+						</v8:item>
+					</Title>
+					<PagesRepresentation>None</PagesRepresentation>
+					<ExtendedTooltip name="ГруппаКнопкаОбновитьРасширеннаяПодсказка" id="70"/>
+					<ChildItems>
+						<Page name="Обычная" id="71">
+							<ToolTip>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Обычная</v8:content>
+								</v8:item>
+							</ToolTip>
+							<Group>Horizontal</Group>
+							<ExtendedTooltip name="ОбычнаяРасширеннаяПодсказка" id="72"/>
+							<ChildItems>
+								<CommandBar name="ГруппаКомандаОбновитьОбычная" id="73">
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Группа команда обновить обычная</v8:content>
+										</v8:item>
+									</Title>
+									<Width>3</Width>
+									<HorizontalStretch>false</HorizontalStretch>
+									<ExtendedTooltip name="ГруппаКомандаОбновитьОбычнаяРасширеннаяПодсказка" id="74"/>
+									<ChildItems>
+										<Button name="ОтправитьИПолучитьНижняяКнопка" id="75">
+											<Type>CommandBarButton</Type>
+											<Representation>Picture</Representation>
+											<Width>3</Width>
+											<CommandName>Form.Command.Синхронизировать</CommandName>
+											<Picture>
+												<xr:Ref>CommonPicture.КомандаОбновитьСписок</xr:Ref>
+												<xr:LoadTransparent>true</xr:LoadTransparent>
+											</Picture>
+											<ExtendedTooltip name="ОтправитьИПолучитьНижняяКнопкаРасширеннаяПодсказка" id="76"/>
+										</Button>
+									</ChildItems>
+								</CommandBar>
+								<LabelField name="ОписаниеПоследнегоОбновления" id="77">
+									<DataPath>ОписаниеПоследнегоОбновления</DataPath>
+									<TitleLocation>None</TitleLocation>
+									<Width>8</Width>
+									<Font ref="sys:DefaultGUIFont" kind="WindowsFont"/>
+									<ContextMenu name="ОписаниеПоследнегоОбновленияКонтекстноеМеню" id="78"/>
+									<ExtendedTooltip name="ОписаниеПоследнегоОбновленияРасширеннаяПодсказка" id="79"/>
+								</LabelField>
+							</ChildItems>
+						</Page>
+						<Page name="Внимание" id="80">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Внимание</v8:content>
+								</v8:item>
+							</Title>
+							<ToolTip>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Внимание</v8:content>
+								</v8:item>
+							</ToolTip>
+							<Group>Horizontal</Group>
+							<ExtendedTooltip name="ВниманиеРасширеннаяПодсказка" id="81"/>
+							<ChildItems>
+								<CommandBar name="ГруппаКомандаОбновитьВнимание" id="82">
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Группа команда обновить внимание</v8:content>
+										</v8:item>
+									</Title>
+									<ToolTip>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Группа команда обновить внимание</v8:content>
+										</v8:item>
+									</ToolTip>
+									<Width>3</Width>
+									<HorizontalStretch>false</HorizontalStretch>
+									<ExtendedTooltip name="ГруппаКомандаОбновитьВниманиеРасширеннаяПодсказка" id="83"/>
+									<ChildItems>
+										<Button name="ОтправитьИПолучитьНижняяКнопкаВнимание" id="84">
+											<Type>CommandBarButton</Type>
+											<Representation>Picture</Representation>
+											<OnlyInAllActions>true</OnlyInAllActions>
+											<Width>3</Width>
+											<CommandName>Form.Command.Синхронизировать</CommandName>
+											<Picture>
+												<xr:Ref>CommonPicture.КомандаОбновитьВнимание</xr:Ref>
+												<xr:LoadTransparent>true</xr:LoadTransparent>
+											</Picture>
+											<ExtendedTooltip name="ОтправитьИПолучитьНижняяКнопкаВниманиеРасширеннаяПодсказка" id="85"/>
+										</Button>
+									</ChildItems>
+								</CommandBar>
+								<LabelField name="ОписаниеПоследнегоОбновленияВнимание" id="86">
+									<DataPath>ОписаниеПоследнегоОбновления</DataPath>
+									<TitleLocation>None</TitleLocation>
+									<Width>1</Width>
+									<Font ref="sys:DefaultGUIFont" kind="WindowsFont"/>
+									<ContextMenu name="ОписаниеПоследнегоОбновленияВниманиеКонтекстноеМеню" id="87"/>
+									<ExtendedTooltip name="ОписаниеПоследнегоОбновленияВниманиеРасширеннаяПодсказка" id="88"/>
+								</LabelField>
+							</ChildItems>
+						</Page>
+						<Page name="ВПроцессе" id="89">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>В процессе</v8:content>
+								</v8:item>
+							</Title>
+							<ToolTip>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>В процессе</v8:content>
+								</v8:item>
+							</ToolTip>
+							<Group>Horizontal</Group>
+							<VerticalAlign>Bottom</VerticalAlign>
+							<ExtendedTooltip name="ВПроцессеРасширеннаяПодсказка" id="90"/>
+							<ChildItems>
+								<PictureDecoration name="ДекорацияВПроцессе" id="91">
+									<Width>3</Width>
+									<Title formatted="false">
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Декорация в процессе</v8:content>
+										</v8:item>
+									</Title>
+									<Picture>
+										<xr:Ref>CommonPicture.КомандаОбновитьВПроцессе</xr:Ref>
+										<xr:LoadTransparent>true</xr:LoadTransparent>
+									</Picture>
+									<FileDragMode>AsFile</FileDragMode>
+									<ContextMenu name="ДекорацияВПроцессеКонтекстноеМеню" id="92"/>
+									<ExtendedTooltip name="ДекорацияВПроцессеРасширеннаяПодсказка" id="93"/>
+								</PictureDecoration>
+								<LabelField name="ОписаниеПоследнегоОбновленияВПроцессе" id="94">
+									<DataPath>ОписаниеПоследнегоОбновления</DataPath>
+									<TitleLocation>None</TitleLocation>
+									<HorizontalAlign>Left</HorizontalAlign>
+									<VerticalAlign>Center</VerticalAlign>
+									<Width>1</Width>
+									<HorizontalStretch>true</HorizontalStretch>
+									<VerticalStretch>false</VerticalStretch>
+									<Font ref="sys:DefaultGUIFont" kind="WindowsFont"/>
+									<ContextMenu name="ОписаниеПоследнегоОбновленияВПроцессеКонтекстноеМеню" id="95"/>
+									<ExtendedTooltip name="ОписаниеПоследнегоОбновленияВПроцессеРасширеннаяПодсказка" id="96"/>
+								</LabelField>
+							</ChildItems>
+						</Page>
+					</ChildItems>
+				</Pages>
+			</ChildItems>
+		</UsualGroup>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="ТекущийТипОтображения" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Текущий тип отображения</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:decimal</v8:Type>
+				<v8:NumberQualifiers>
+					<v8:Digits>1</v8:Digits>
+					<v8:FractionDigits>0</v8:FractionDigits>
+					<v8:AllowedSign>Nonnegative</v8:AllowedSign>
+				</v8:NumberQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="СписокЗадач" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Список задач</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:DynamicList</v8:Type>
+			</Type>
+			<Settings xsi:type="DynamicList">
+				<ManualQuery>true</ManualQuery>
+				<DynamicDataRead>true</DynamicDataRead>
+				<QueryText>ВЫБРАТЬ
+	Файлы.ВладелецФайла КАК СсылкаСВложением
+ПОМЕСТИТЬ ВладельцыФайлов
+ИЗ
+	Справочник.Файлы КАК Файлы
+ГДЕ
+	НЕ Файлы.ПометкаУдаления
+
+СГРУППИРОВАТЬ ПО
+	Файлы.ВладелецФайла
+
+ИНДЕКСИРОВАТЬ ПО
+	СсылкаСВложением
+;
+
+////////////////////////////////////////////////////////////////////////////////
+ВЫБРАТЬ
+	РеестрПлатежей.Номер КАК Номер,
+	РеестрПлатежей.Дата КАК Дата,
+	РеестрПлатежей.Инициатор КАК Инициатор,
+	РеестрПлатежей.Ссылка КАК Ссылка,
+	РеестрПлатежей.Прочитан КАК Прочитан,
+	РеестрПлатежей.Организация КАК Организация,
+	РеестрПлатежей.СрокИсполнения КАК СрокИсполнения,
+	ВЫБОР
+		КОГДА НЕ РеестрПлатежей.СрокИсполнения = ДАТАВРЕМЯ(1, 1, 1, 0, 0, 0)
+				И РеестрПлатежей.СрокИсполнения &lt; &amp;ТекущаяДата
+			ТОГДА 1
+		ИНАЧЕ 0
+	КОНЕЦ КАК Просрочено,
+	РеестрПлатежей.Сумма КАК Сумма,
+	ВЫБОР
+		КОГДА ВладельцыФайлов.СсылкаСВложением ЕСТЬ NULL
+			ТОГДА ЛОЖЬ
+		ИНАЧЕ ИСТИНА
+	КОНЕЦ КАК ЕстьВложения
+ИЗ
+	Документ.РеестрПлатежей КАК РеестрПлатежей
+		ЛЕВОЕ СОЕДИНЕНИЕ ВладельцыФайлов КАК ВладельцыФайлов
+		ПО РеестрПлатежей.Ссылка = ВладельцыФайлов.СсылкаСВложением
+ГДЕ
+	НЕ РеестрПлатежей.ПометкаУдаления</QueryText>
+				<MainTable>Document.РеестрПлатежей</MainTable>
+				<ListSettings>
+					<dcsset:filter>
+						<dcsset:viewMode>Normal</dcsset:viewMode>
+						<dcsset:userSettingID>dfcece9d-5077-440b-b6b3-45a5cb4538eb</dcsset:userSettingID>
+					</dcsset:filter>
+					<dcsset:order>
+						<dcsset:viewMode>Normal</dcsset:viewMode>
+						<dcsset:userSettingID>88619765-ccb3-46c6-ac52-38e9c992ebd4</dcsset:userSettingID>
+					</dcsset:order>
+					<dcsset:conditionalAppearance>
+						<dcsset:item>
+							<dcsset:selection/>
+							<dcsset:filter>
+								<dcsset:item xsi:type="dcsset:FilterItemComparison">
+									<dcsset:left xsi:type="dcscor:Field">Прочитан</dcsset:left>
+									<dcsset:comparisonType>Equal</dcsset:comparisonType>
+									<dcsset:right xsi:type="xs:boolean">false</dcsset:right>
+								</dcsset:item>
+							</dcsset:filter>
+							<dcsset:appearance>
+								<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+									<dcscor:parameter>Шрифт</dcscor:parameter>
+									<dcscor:value xsi:type="v8ui:Font" ref="sys:DefaultGUIFont" bold="true" italic="false" underline="false" strikeout="false" kind="WindowsFont"/>
+								</dcscor:item>
+							</dcsset:appearance>
+						</dcsset:item>
+						<dcsset:viewMode>Normal</dcsset:viewMode>
+						<dcsset:userSettingID>b75fecce-942b-4aed-abc9-e6a02e460fb3</dcsset:userSettingID>
+					</dcsset:conditionalAppearance>
+					<dcsset:itemsViewMode>Normal</dcsset:itemsViewMode>
+					<dcsset:itemsUserSettingID>911b6018-f537-43e8-a417-da56b22f9aec</dcsset:itemsUserSettingID>
+				</ListSettings>
+			</Settings>
+		</Attribute>
+		<Attribute name="СписокЗадачПустой" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Список задач пустой</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="ОписаниеПоследнегоОбновления" id="4">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Описание последнего обновления</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+			<SavedData>true</SavedData>
+		</Attribute>
+	</Attributes>
+	<Commands>
+		<Command name="Синхронизировать" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Синхронизировать</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Синхронизировать</v8:content>
+				</v8:item>
+			</ToolTip>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+	</Commands>
+	<Parameters>
+		<Parameter name="ТекущаяДата">
+			<Type>
+				<v8:Type>xs:dateTime</v8:Type>
+				<v8:DateQualifiers>
+					<v8:DateFractions>DateTime</v8:DateFractions>
+				</v8:DateQualifiers>
+			</Type>
+		</Parameter>
+	</Parameters>
+</Form>

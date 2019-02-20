@@ -1,0 +1,765 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.7">
+	<WindowOpeningMode>LockOwnerWindow</WindowOpeningMode>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1"/>
+	<Events>
+		<Event name="NotificationProcessing">ОбработкаОповещения</Event>
+		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
+		<Event name="OnClose">ПриЗакрытии</Event>
+	</Events>
+	<ChildItems>
+		<UsualGroup name="ГруппаФорма" id="51">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа форма</v8:content>
+				</v8:item>
+			</Title>
+			<Group>Vertical</Group>
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="ГруппаФормаРасширеннаяПодсказка" id="52"/>
+			<ChildItems>
+				<UsualGroup name="ГруппаПодключение" id="31">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Подключение</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Подключение</v8:content>
+						</v8:item>
+					</ToolTip>
+					<HorizontalStretch>true</HorizontalStretch>
+					<Group>Vertical</Group>
+					<ExtendedTooltip name="ГруппаПодключениеРасширеннаяПодсказка" id="32"/>
+					<ChildItems>
+						<UsualGroup name="ГруппаАвторизация" id="89">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Группа авторизация</v8:content>
+								</v8:item>
+							</Title>
+							<ToolTip>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Группа авторизация</v8:content>
+								</v8:item>
+							</ToolTip>
+							<Group>Vertical</Group>
+							<Representation>None</Representation>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="ГруппаАвторизацияРасширеннаяПодсказка" id="90"/>
+							<ChildItems>
+								<UsualGroup name="ГруппаИмяПользователя" id="91">
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Авторизация</v8:content>
+										</v8:item>
+									</Title>
+									<ToolTip>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Авторизация</v8:content>
+										</v8:item>
+									</ToolTip>
+									<Group>Horizontal</Group>
+									<Representation>None</Representation>
+									<ShowTitle>false</ShowTitle>
+									<ExtendedTooltip name="ГруппаИмяПользователяРасширеннаяПодсказка" id="92"/>
+									<ChildItems>
+										<PictureDecoration name="ДекорацияПользователь" id="96">
+											<Width>3</Width>
+											<Height>1</Height>
+											<Title formatted="false">
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Декорация пользователь</v8:content>
+												</v8:item>
+											</Title>
+											<PictureSize>AutoSize</PictureSize>
+											<Picture>
+												<xr:Ref>StdPicture.User</xr:Ref>
+												<xr:LoadTransparent>true</xr:LoadTransparent>
+											</Picture>
+											<FileDragMode>AsFile</FileDragMode>
+											<ContextMenu name="ДекорацияПользовательКонтекстноеМеню" id="97"/>
+											<ExtendedTooltip name="ДекорацияПользовательРасширеннаяПодсказка" id="98"/>
+										</PictureDecoration>
+										<LabelField name="ПользовательЦентральнойБазы" id="93">
+											<DataPath>ИмяПользователя</DataPath>
+											<TitleLocation>None</TitleLocation>
+											<ToolTip>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Пользователь приложения</v8:content>
+												</v8:item>
+											</ToolTip>
+											<HorizontalAlign>Left</HorizontalAlign>
+											<HorizontalStretch>true</HorizontalStretch>
+											<Font ref="style:NormalTextFont" kind="StyleItem"/>
+											<ContextMenu name="ПользовательЦентральнойБазыКонтекстноеМеню" id="94"/>
+											<ExtendedTooltip name="ПользовательЦентральнойБазыРасширеннаяПодсказка" id="95"/>
+										</LabelField>
+									</ChildItems>
+								</UsualGroup>
+								<UsualGroup name="ГруппаАвторизацияПодключение" id="99">
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Группа авторизация подключение</v8:content>
+										</v8:item>
+									</Title>
+									<ToolTip>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Группа режим работы настройка синхронизации</v8:content>
+										</v8:item>
+									</ToolTip>
+									<Group>Horizontal</Group>
+									<Representation>None</Representation>
+									<ShowTitle>false</ShowTitle>
+									<ExtendedTooltip name="ГруппаАвторизацияПодключениеРасширеннаяПодсказка" id="100"/>
+									<ChildItems>
+										<LabelDecoration name="ДекорацияОтступ7" id="101">
+											<HorizontalStretch>true</HorizontalStretch>
+											<ContextMenu name="ДекорацияОтступ7КонтекстноеМеню" id="102"/>
+											<ExtendedTooltip name="ДекорацияОтступ7РасширеннаяПодсказка" id="103"/>
+										</LabelDecoration>
+										<Button name="ПодключитьсяОтключиться" id="107">
+											<Type>UsualButton</Type>
+											<Representation>Text</Representation>
+											<CommandName>Form.Command.НастройкиСинхронизации</CommandName>
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Подключиться к сервису</v8:content>
+												</v8:item>
+											</Title>
+											<ExtendedTooltip name="ПодключитьсяОтключитьсяРасширеннаяПодсказка" id="108"/>
+										</Button>
+										<LabelDecoration name="ДекорацияОтступ8" id="104">
+											<HorizontalStretch>true</HorizontalStretch>
+											<ContextMenu name="ДекорацияОтступ8КонтекстноеМеню" id="105"/>
+											<ExtendedTooltip name="ДекорацияОтступ8РасширеннаяПодсказка" id="106"/>
+										</LabelDecoration>
+									</ChildItems>
+								</UsualGroup>
+							</ChildItems>
+						</UsualGroup>
+						<UsualGroup name="ГруппаФоноваяСинхронизация" id="53">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Группа фоновая синхронизация</v8:content>
+								</v8:item>
+							</Title>
+							<Group>Horizontal</Group>
+							<Representation>None</Representation>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="ГруппаФоноваяСинхронизацияРасширеннаяПодсказка" id="54"/>
+							<ChildItems>
+								<UsualGroup name="ГруппаФоноваяСинхронизацияЛево" id="55">
+									<HorizontalStretch>true</HorizontalStretch>
+									<Group>Vertical</Group>
+									<Representation>None</Representation>
+									<ShowTitle>false</ShowTitle>
+									<ExtendedTooltip name="ГруппаФоноваяСинхронизацияЛевоРасширеннаяПодсказка" id="56"/>
+									<ChildItems>
+										<LabelDecoration name="ДекорацияФоноваяСинхронизация" id="59">
+											<Title formatted="false">
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Фоновая синхронизация</v8:content>
+												</v8:item>
+											</Title>
+											<ContextMenu name="ДекорацияФоноваяСинхронизацияКонтекстноеМеню" id="60"/>
+											<ExtendedTooltip name="ДекорацияФоноваяСинхронизацияРасширеннаяПодсказка" id="61"/>
+										</LabelDecoration>
+										<LabelDecoration name="ДекорацияФоноваяСинхронизацияПодсказка" id="62">
+											<TextColor>#808080</TextColor>
+											<Title formatted="false">
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>При старте приложения обмен будет запускаться автоматически.</v8:content>
+												</v8:item>
+											</Title>
+											<ContextMenu name="ДекорацияФоноваяСинхронизацияПодсказкаКонтекстноеМеню" id="63"/>
+											<ExtendedTooltip name="ДекорацияФоноваяСинхронизацияПодсказкаРасширеннаяПодсказка" id="64"/>
+										</LabelDecoration>
+									</ChildItems>
+								</UsualGroup>
+								<UsualGroup name="ГруппаФоноваяСинхронизацияПраво" id="57">
+									<HorizontalStretch>true</HorizontalStretch>
+									<Group>Vertical</Group>
+									<Representation>None</Representation>
+									<ShowTitle>false</ShowTitle>
+									<ExtendedTooltip name="ГруппаФоноваяСинхронизацияПравоРасширеннаяПодсказка" id="58"/>
+									<ChildItems>
+										<LabelDecoration name="ДекорацияОтступ5" id="65">
+											<ContextMenu name="ДекорацияОтступ5КонтекстноеМеню" id="66"/>
+											<ExtendedTooltip name="ДекорацияОтступ5РасширеннаяПодсказка" id="67"/>
+										</LabelDecoration>
+										<CheckBoxField name="НаборКонстантИспользоватьФоновуюСинхронизацию" id="68">
+											<DataPath>ИспользоватьФоновуюСинхронизацию</DataPath>
+											<TitleLocation>None</TitleLocation>
+											<CheckBoxType>Tumbler</CheckBoxType>
+											<ContextMenu name="НаборКонстантИспользоватьФоновуюСинхронизациюКонтекстноеМеню" id="69"/>
+											<ExtendedTooltip name="НаборКонстантИспользоватьФоновуюСинхронизациюРасширеннаяПодсказка" id="70"/>
+											<Events>
+												<Event name="OnChange">НаборКонстантИспользоватьФоновуюСинхронизациюПриИзменении</Event>
+											</Events>
+										</CheckBoxField>
+									</ChildItems>
+								</UsualGroup>
+							</ChildItems>
+						</UsualGroup>
+						<UsualGroup name="ГруппаИспользоватьТолькоWiFi" id="33">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Группа использовать только wi fi</v8:content>
+								</v8:item>
+							</Title>
+							<Group>Horizontal</Group>
+							<Representation>None</Representation>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="ГруппаИспользоватьТолькоWiFiРасширеннаяПодсказка" id="34"/>
+							<ChildItems>
+								<UsualGroup name="ГруппаИспользоватьТолькоWiFiЛево" id="35">
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Группа использовать только wi fi лево</v8:content>
+										</v8:item>
+									</Title>
+									<HorizontalStretch>true</HorizontalStretch>
+									<Group>Vertical</Group>
+									<Representation>None</Representation>
+									<ShowTitle>false</ShowTitle>
+									<ExtendedTooltip name="ГруппаИспользоватьТолькоWiFiЛевоРасширеннаяПодсказка" id="36"/>
+									<ChildItems>
+										<LabelDecoration name="ДекорацияТолькоWiFi" id="39">
+											<Title formatted="false">
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Использовать только Wi-Fi</v8:content>
+												</v8:item>
+											</Title>
+											<ContextMenu name="ДекорацияТолькоWiFiКонтекстноеМеню" id="40"/>
+											<ExtendedTooltip name="ДекорацияТолькоWiFiРасширеннаяПодсказка" id="41"/>
+										</LabelDecoration>
+										<LabelDecoration name="ДекорацияТолькоWiFiПодсказка" id="42">
+											<TextColor>#808080</TextColor>
+											<Font ref="style:NormalTextFont" kind="StyleItem"/>
+											<Title formatted="false">
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Разрешить фоновую загрузку данных только при наличии Wi-Fi.</v8:content>
+												</v8:item>
+											</Title>
+											<ContextMenu name="ДекорацияТолькоWiFiПодсказкаКонтекстноеМеню" id="43"/>
+											<ExtendedTooltip name="ДекорацияТолькоWiFiПодсказкаРасширеннаяПодсказка" id="44"/>
+										</LabelDecoration>
+									</ChildItems>
+								</UsualGroup>
+								<UsualGroup name="ГруппаИспользоватьТолькоWiFiПраво" id="37">
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Группа использовать только wi fi право</v8:content>
+										</v8:item>
+									</Title>
+									<HorizontalStretch>true</HorizontalStretch>
+									<GroupHorizontalAlign>Right</GroupHorizontalAlign>
+									<Group>Vertical</Group>
+									<Representation>None</Representation>
+									<ShowTitle>false</ShowTitle>
+									<ExtendedTooltip name="ГруппаИспользоватьТолькоWiFiПравоРасширеннаяПодсказка" id="38"/>
+									<ChildItems>
+										<LabelDecoration name="ДекорацияОтступ4" id="48">
+											<ContextMenu name="ДекорацияОтступ4КонтекстноеМеню" id="49"/>
+											<ExtendedTooltip name="ДекорацияОтступ4РасширеннаяПодсказка" id="50"/>
+										</LabelDecoration>
+										<CheckBoxField name="НаборКонстантИспользоватьТолькоWiFi" id="45">
+											<DataPath>ИспользоватьТолькоWiFi</DataPath>
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Использовать</v8:content>
+												</v8:item>
+											</Title>
+											<TitleLocation>None</TitleLocation>
+											<ToolTip>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Разрешить фоновую загрузку данных только при наличии Wi-Fi.</v8:content>
+												</v8:item>
+											</ToolTip>
+											<CheckBoxType>Tumbler</CheckBoxType>
+											<ContextMenu name="НаборКонстантИспользоватьТолькоWiFiКонтекстноеМеню" id="46"/>
+											<ExtendedTooltip name="НаборКонстантИспользоватьТолькоWiFiРасширеннаяПодсказка" id="47"/>
+											<Events>
+												<Event name="OnChange">НаборКонстантИспользоватьТолькоWiFiПриИзменении</Event>
+											</Events>
+										</CheckBoxField>
+									</ChildItems>
+								</UsualGroup>
+							</ChildItems>
+						</UsualGroup>
+						<UsualGroup name="ГруппаМаксимальныйРазмерФайла" id="71">
+							<HorizontalStretch>true</HorizontalStretch>
+							<Group>Vertical</Group>
+							<Representation>None</Representation>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="ГруппаМаксимальныйРазмерФайлаРасширеннаяПодсказка" id="72"/>
+							<ChildItems>
+								<UsualGroup name="ГруппаМаксимальныйРазмерФайлаЛево" id="73">
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Максимальный размер файла</v8:content>
+										</v8:item>
+									</Title>
+									<ToolTip>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Группа максимальный размер файла лево</v8:content>
+										</v8:item>
+									</ToolTip>
+									<HorizontalStretch>true</HorizontalStretch>
+									<Group>Vertical</Group>
+									<Representation>None</Representation>
+									<ShowTitle>false</ShowTitle>
+									<ExtendedTooltip name="ГруппаМаксимальныйРазмерФайлаЛевоРасширеннаяПодсказка" id="74"/>
+									<ChildItems>
+										<LabelDecoration name="ДекорацияМаксимальныйРазмерФайла" id="77">
+											<Title formatted="false">
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Максимальный размер файла</v8:content>
+												</v8:item>
+											</Title>
+											<ContextMenu name="ДекорацияМаксимальныйРазмерФайлаКонтекстноеМеню" id="78"/>
+											<ExtendedTooltip name="ДекорацияМаксимальныйРазмерФайлаРасширеннаяПодсказка" id="79"/>
+										</LabelDecoration>
+										<InputField name="НаборКонстантМаксимальныйРазмерФайла" id="86">
+											<DataPath>МаксимальныйРазмерФайла</DataPath>
+											<TitleLocation>None</TitleLocation>
+											<HorizontalStretch>true</HorizontalStretch>
+											<ListChoiceMode>true</ListChoiceMode>
+											<ChooseType>false</ChooseType>
+											<TextEdit>false</TextEdit>
+											<ChoiceList>
+												<xr:Item>
+													<xr:Presentation/>
+													<xr:CheckState>0</xr:CheckState>
+													<xr:Value xsi:type="FormChoiceListDesTimeValue">
+														<Presentation>
+															<v8:item>
+																<v8:lang>ru</v8:lang>
+																<v8:content>Загружать только заголовки</v8:content>
+															</v8:item>
+														</Presentation>
+														<Value xsi:type="xs:decimal">1</Value>
+													</xr:Value>
+												</xr:Item>
+												<xr:Item>
+													<xr:Presentation/>
+													<xr:CheckState>0</xr:CheckState>
+													<xr:Value xsi:type="FormChoiceListDesTimeValue">
+														<Presentation>
+															<v8:item>
+																<v8:lang>ru</v8:lang>
+																<v8:content>100 кб</v8:content>
+															</v8:item>
+														</Presentation>
+														<Value xsi:type="xs:decimal">100</Value>
+													</xr:Value>
+												</xr:Item>
+												<xr:Item>
+													<xr:Presentation/>
+													<xr:CheckState>0</xr:CheckState>
+													<xr:Value xsi:type="FormChoiceListDesTimeValue">
+														<Presentation>
+															<v8:item>
+																<v8:lang>ru</v8:lang>
+																<v8:content>200 кб</v8:content>
+															</v8:item>
+														</Presentation>
+														<Value xsi:type="xs:decimal">200</Value>
+													</xr:Value>
+												</xr:Item>
+												<xr:Item>
+													<xr:Presentation/>
+													<xr:CheckState>0</xr:CheckState>
+													<xr:Value xsi:type="FormChoiceListDesTimeValue">
+														<Presentation>
+															<v8:item>
+																<v8:lang>ru</v8:lang>
+																<v8:content>300 кб</v8:content>
+															</v8:item>
+														</Presentation>
+														<Value xsi:type="xs:decimal">300</Value>
+													</xr:Value>
+												</xr:Item>
+												<xr:Item>
+													<xr:Presentation/>
+													<xr:CheckState>0</xr:CheckState>
+													<xr:Value xsi:type="FormChoiceListDesTimeValue">
+														<Presentation>
+															<v8:item>
+																<v8:lang>ru</v8:lang>
+																<v8:content>400 кб</v8:content>
+															</v8:item>
+														</Presentation>
+														<Value xsi:type="xs:decimal">400</Value>
+													</xr:Value>
+												</xr:Item>
+												<xr:Item>
+													<xr:Presentation/>
+													<xr:CheckState>0</xr:CheckState>
+													<xr:Value xsi:type="FormChoiceListDesTimeValue">
+														<Presentation>
+															<v8:item>
+																<v8:lang>ru</v8:lang>
+																<v8:content>500 кб</v8:content>
+															</v8:item>
+														</Presentation>
+														<Value xsi:type="xs:decimal">500</Value>
+													</xr:Value>
+												</xr:Item>
+												<xr:Item>
+													<xr:Presentation/>
+													<xr:CheckState>0</xr:CheckState>
+													<xr:Value xsi:type="FormChoiceListDesTimeValue">
+														<Presentation>
+															<v8:item>
+																<v8:lang>ru</v8:lang>
+																<v8:content>1 мб</v8:content>
+															</v8:item>
+														</Presentation>
+														<Value xsi:type="xs:decimal">1024</Value>
+													</xr:Value>
+												</xr:Item>
+												<xr:Item>
+													<xr:Presentation/>
+													<xr:CheckState>0</xr:CheckState>
+													<xr:Value xsi:type="FormChoiceListDesTimeValue">
+														<Presentation>
+															<v8:item>
+																<v8:lang>ru</v8:lang>
+																<v8:content>2 мб</v8:content>
+															</v8:item>
+														</Presentation>
+														<Value xsi:type="xs:decimal">2048</Value>
+													</xr:Value>
+												</xr:Item>
+												<xr:Item>
+													<xr:Presentation/>
+													<xr:CheckState>0</xr:CheckState>
+													<xr:Value xsi:type="FormChoiceListDesTimeValue">
+														<Presentation>
+															<v8:item>
+																<v8:lang>ru</v8:lang>
+																<v8:content>Всегда загружать полностью</v8:content>
+															</v8:item>
+														</Presentation>
+														<Value xsi:type="xs:decimal">0</Value>
+													</xr:Value>
+												</xr:Item>
+											</ChoiceList>
+											<ContextMenu name="НаборКонстантМаксимальныйРазмерФайлаКонтекстноеМеню" id="87"/>
+											<ExtendedTooltip name="НаборКонстантМаксимальныйРазмерФайлаРасширеннаяПодсказка" id="88"/>
+											<Events>
+												<Event name="OnChange">НаборКонстантМаксимальныйРазмерФайлаПриИзменении</Event>
+											</Events>
+										</InputField>
+										<LabelDecoration name="ДекорацияМаксимальныйРазмерФайлаПодсказка" id="80">
+											<HorizontalStretch>true</HorizontalStretch>
+											<TextColor>#808080</TextColor>
+											<Title formatted="false">
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Настройка максимального размера для файлов, которые будут полностью передаваться на мобильный клиент. Файлы большего размера будут загружены при открытии.</v8:content>
+												</v8:item>
+											</Title>
+											<ContextMenu name="ДекорацияМаксимальныйРазмерФайлаПодсказкаКонтекстноеМеню" id="81"/>
+											<ExtendedTooltip name="ДекорацияМаксимальныйРазмерФайлаПодсказкаРасширеннаяПодсказка" id="82"/>
+										</LabelDecoration>
+									</ChildItems>
+								</UsualGroup>
+							</ChildItems>
+						</UsualGroup>
+					</ChildItems>
+				</UsualGroup>
+				<UsualGroup name="ГруппаБезопасность" id="1">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Безопасность</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Безопасность</v8:content>
+						</v8:item>
+					</ToolTip>
+					<HorizontalStretch>true</HorizontalStretch>
+					<Group>Vertical</Group>
+					<ExtendedTooltip name="ГруппаБезопасностьРасширеннаяПодсказка" id="2"/>
+					<ChildItems>
+						<UsualGroup name="ГруппаИспользоватьКодДоступа" id="3">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Группа использовать код доступа</v8:content>
+								</v8:item>
+							</Title>
+							<ToolTip>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Группа использовать код доступа</v8:content>
+								</v8:item>
+							</ToolTip>
+							<Group>Horizontal</Group>
+							<Representation>None</Representation>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="ГруппаИспользоватьКодДоступаРасширеннаяПодсказка" id="4"/>
+							<ChildItems>
+								<UsualGroup name="ГруппаКодДоступаЛево" id="5">
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Группа код доступа лево</v8:content>
+										</v8:item>
+									</Title>
+									<ToolTip>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Группа код доступа лево</v8:content>
+										</v8:item>
+									</ToolTip>
+									<HorizontalStretch>true</HorizontalStretch>
+									<Group>Vertical</Group>
+									<Representation>None</Representation>
+									<ShowTitle>false</ShowTitle>
+									<ExtendedTooltip name="ГруппаКодДоступаЛевоРасширеннаяПодсказка" id="6"/>
+									<ChildItems>
+										<LabelDecoration name="КодДоступа" id="9">
+											<Title formatted="false">
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Использовать код доступа</v8:content>
+												</v8:item>
+											</Title>
+											<ContextMenu name="КодДоступаКонтекстноеМеню" id="10"/>
+											<ExtendedTooltip name="КодДоступаРасширеннаяПодсказка" id="11"/>
+										</LabelDecoration>
+										<LabelDecoration name="КодДоступаПодсказка" id="12">
+											<TextColor>#808080</TextColor>
+											<Font ref="style:NormalTextFont" kind="StyleItem"/>
+											<Title formatted="false">
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Каждый раз при запуске приложения будет запрашиваться код доступа.</v8:content>
+												</v8:item>
+											</Title>
+											<ContextMenu name="КодДоступаПодсказкаКонтекстноеМеню" id="13"/>
+											<ExtendedTooltip name="КодДоступаПодсказкаРасширеннаяПодсказка" id="14"/>
+										</LabelDecoration>
+									</ChildItems>
+								</UsualGroup>
+								<UsualGroup name="ГруппаКодДоступаПраво" id="7">
+									<ToolTip>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Группа код доступа право</v8:content>
+										</v8:item>
+									</ToolTip>
+									<HorizontalStretch>true</HorizontalStretch>
+									<Group>Vertical</Group>
+									<Representation>None</Representation>
+									<ShowTitle>false</ShowTitle>
+									<ExtendedTooltip name="ГруппаКодДоступаПравоРасширеннаяПодсказка" id="8"/>
+									<ChildItems>
+										<LabelDecoration name="ДекорацияОтступ1" id="15">
+											<ContextMenu name="ДекорацияОтступ1КонтекстноеМеню" id="16"/>
+											<ExtendedTooltip name="ДекорацияОтступ1РасширеннаяПодсказка" id="17"/>
+										</LabelDecoration>
+										<CheckBoxField name="КодДоступаПереключатель" id="18">
+											<DataPath>КодДоступаВключен</DataPath>
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Использовать</v8:content>
+												</v8:item>
+											</Title>
+											<TitleLocation>None</TitleLocation>
+											<ToolTip>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Каждый раз при запуске приложения будет запрашиваться код доступа.</v8:content>
+												</v8:item>
+											</ToolTip>
+											<CheckBoxType>Tumbler</CheckBoxType>
+											<ContextMenu name="КодДоступаПереключательКонтекстноеМеню" id="19"/>
+											<ExtendedTooltip name="КодДоступаПереключательРасширеннаяПодсказка" id="20"/>
+											<Events>
+												<Event name="OnChange">КодДоступаПереключательПриИзменении</Event>
+											</Events>
+										</CheckBoxField>
+									</ChildItems>
+								</UsualGroup>
+							</ChildItems>
+						</UsualGroup>
+						<UsualGroup name="ГруппаНастройкаКодДоступа" id="21">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Группа настройка код доступа</v8:content>
+								</v8:item>
+							</Title>
+							<ToolTip>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Группа настройка код доступа</v8:content>
+								</v8:item>
+							</ToolTip>
+							<Group>Horizontal</Group>
+							<Representation>None</Representation>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="ГруппаНастройкаКодДоступаРасширеннаяПодсказка" id="22"/>
+							<ChildItems>
+								<LabelDecoration name="ДекорацияОтступ2" id="23">
+									<HorizontalStretch>true</HorizontalStretch>
+									<ContextMenu name="ДекорацияОтступ2КонтекстноеМеню" id="24"/>
+									<ExtendedTooltip name="ДекорацияОтступ2РасширеннаяПодсказка" id="25"/>
+								</LabelDecoration>
+								<Button name="ЗадатьКодДоступа" id="26">
+									<Type>UsualButton</Type>
+									<Representation>PictureAndText</Representation>
+									<CommandName>Form.Command.ЗадатьКодДоступа</CommandName>
+									<ExtendedTooltip name="ЗадатьКодДоступаРасширеннаяПодсказка" id="27"/>
+								</Button>
+								<LabelDecoration name="ДекорацияОтступ3" id="28">
+									<HorizontalStretch>true</HorizontalStretch>
+									<ContextMenu name="ДекорацияОтступ3КонтекстноеМеню" id="29"/>
+									<ExtendedTooltip name="ДекорацияОтступ3РасширеннаяПодсказка" id="30"/>
+								</LabelDecoration>
+							</ChildItems>
+						</UsualGroup>
+					</ChildItems>
+				</UsualGroup>
+			</ChildItems>
+		</UsualGroup>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="КодДоступаВключен" id="1">
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="ИспользоватьТолькоWiFi" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Использовать только wi fi</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="ИспользоватьФоновуюСинхронизацию" id="4">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Использовать фоновую синхронизацию</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="МаксимальныйРазмерФайла" id="5">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Максимальный размер файла</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:decimal</v8:Type>
+				<v8:NumberQualifiers>
+					<v8:Digits>30</v8:Digits>
+					<v8:FractionDigits>0</v8:FractionDigits>
+					<v8:AllowedSign>Nonnegative</v8:AllowedSign>
+				</v8:NumberQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="ИмяПользователя" id="6">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Имя пользователя</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+	</Attributes>
+	<Commands>
+		<Command name="ЗадатьКодДоступа" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Сменить код доступа</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Задать код доступа</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ЗадатьКодДоступа</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="НастройкиСинхронизации" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Настройки синхронизации</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Synchronization Settings</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Synchronization Settings</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Picture>
+				<xr:Ref>StdPicture.Refresh</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</Picture>
+			<Action>НастройкиСинхронизации</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+	</Commands>
+</Form>

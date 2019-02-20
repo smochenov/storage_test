@@ -1,0 +1,428 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.7">
+	<AutoTitle>false</AutoTitle>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1">
+		<Autofill>false</Autofill>
+	</AutoCommandBar>
+	<Events>
+		<Event name="NotificationProcessing">ОбработкаОповещения</Event>
+		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
+	</Events>
+	<ChildItems>
+		<UsualGroup name="Группа1" id="1">
+			<Group>Vertical</Group>
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="Группа1РасширеннаяПодсказка" id="2"/>
+			<ChildItems>
+				<Pages name="ГруппаСтраницы" id="9">
+					<PagesRepresentation>Swipe</PagesRepresentation>
+					<ExtendedTooltip name="ГруппаСтраницыРасширеннаяПодсказка" id="10"/>
+					<ChildItems>
+						<Page name="ГруппаДокументыВРаботе" id="11">
+							<ExtendedTooltip name="ГруппаДокументыВРаботеРасширеннаяПодсказка" id="12"/>
+							<ChildItems>
+								<UsualGroup name="ГруппаРазделы" id="13">
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Группа разделы</v8:content>
+										</v8:item>
+									</Title>
+									<ToolTip>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Группа разделы</v8:content>
+										</v8:item>
+									</ToolTip>
+									<Group>Horizontal</Group>
+									<Representation>None</Representation>
+									<ShowTitle>false</ShowTitle>
+									<ExtendedTooltip name="ГруппаРазделыРасширеннаяПодсказка" id="14"/>
+									<ChildItems>
+										<Table name="Разделы" id="15">
+											<Representation>List</Representation>
+											<ChangeRowSet>false</ChangeRowSet>
+											<ChangeRowOrder>false</ChangeRowOrder>
+											<Height>1</Height>
+											<HeightControlVariant>UseHeightInFormRows</HeightControlVariant>
+											<Header>false</Header>
+											<VerticalLines>false</VerticalLines>
+											<AutoInsertNewRow>true</AutoInsertNewRow>
+											<EnableStartDrag>true</EnableStartDrag>
+											<EnableDrag>true</EnableDrag>
+											<FileDragMode>AsFile</FileDragMode>
+											<DataPath>Разделы</DataPath>
+											<CommandSet>
+												<ExcludedCommand>Add</ExcludedCommand>
+												<ExcludedCommand>CancelSearch</ExcludedCommand>
+												<ExcludedCommand>Change</ExcludedCommand>
+												<ExcludedCommand>Copy</ExcludedCommand>
+												<ExcludedCommand>CopyToClipboard</ExcludedCommand>
+												<ExcludedCommand>Delete</ExcludedCommand>
+												<ExcludedCommand>EndEdit</ExcludedCommand>
+												<ExcludedCommand>Find</ExcludedCommand>
+												<ExcludedCommand>MoveDown</ExcludedCommand>
+												<ExcludedCommand>MoveUp</ExcludedCommand>
+												<ExcludedCommand>OutputList</ExcludedCommand>
+												<ExcludedCommand>SelectAll</ExcludedCommand>
+												<ExcludedCommand>ShowMultipleSelection</ExcludedCommand>
+												<ExcludedCommand>ShowRowRearrangement</ExcludedCommand>
+												<ExcludedCommand>SortListAsc</ExcludedCommand>
+												<ExcludedCommand>SortListDesc</ExcludedCommand>
+											</CommandSet>
+											<SearchStringLocation>None</SearchStringLocation>
+											<RefreshRequest>PullFromTop</RefreshRequest>
+											<RowFilter xsi:nil="true"/>
+											<ContextMenu name="РазделыКонтекстноеМеню" id="16"/>
+											<AutoCommandBar name="РазделыКоманднаяПанель" id="17">
+												<Autofill>false</Autofill>
+											</AutoCommandBar>
+											<ExtendedTooltip name="РазделыРасширеннаяПодсказка" id="18"/>
+											<SearchStringAddition name="РазделыСтрокаПоиска" id="19">
+												<AdditionSource>
+													<Item>Разделы</Item>
+													<Type>SearchStringRepresentation</Type>
+												</AdditionSource>
+												<ContextMenu name="РазделыСтрокаПоискаКонтекстноеМеню" id="20"/>
+												<ExtendedTooltip name="РазделыСтрокаПоискаРасширеннаяПодсказка" id="21"/>
+											</SearchStringAddition>
+											<ViewStatusAddition name="РазделыСостояниеПросмотра" id="22">
+												<AdditionSource>
+													<Item>Разделы</Item>
+													<Type>ViewStatusRepresentation</Type>
+												</AdditionSource>
+												<ContextMenu name="РазделыСостояниеПросмотраКонтекстноеМеню" id="23"/>
+												<ExtendedTooltip name="РазделыСостояниеПросмотраРасширеннаяПодсказка" id="24"/>
+											</ViewStatusAddition>
+											<SearchControlAddition name="РазделыУправлениеПоиском" id="25">
+												<AdditionSource>
+													<Item>Разделы</Item>
+													<Type>SearchControl</Type>
+												</AdditionSource>
+												<ContextMenu name="РазделыУправлениеПоискомКонтекстноеМеню" id="26"/>
+												<ExtendedTooltip name="РазделыУправлениеПоискомРасширеннаяПодсказка" id="27"/>
+											</SearchControlAddition>
+											<Events>
+												<Event name="Selection">РазделыВыбор</Event>
+											</Events>
+											<ChildItems>
+												<PictureField name="РазделыКартинка" id="28">
+													<DataPath>Разделы.Картинка</DataPath>
+													<EditMode>EnterOnInput</EditMode>
+													<Width>2</Width>
+													<Height>2</Height>
+													<PictureSize>AutoSize</PictureSize>
+													<FileDragMode>AsFile</FileDragMode>
+													<ContextMenu name="РазделыКартинкаКонтекстноеМеню" id="29"/>
+													<ExtendedTooltip name="РазделыКартинкаРасширеннаяПодсказка" id="30"/>
+												</PictureField>
+												<ColumnGroup name="РазделыГруппаОписание" id="31">
+													<Title>
+														<v8:item>
+															<v8:lang>ru</v8:lang>
+															<v8:content>Описание раздела</v8:content>
+														</v8:item>
+													</Title>
+													<ToolTip>
+														<v8:item>
+															<v8:lang>ru</v8:lang>
+															<v8:content>Разделы группа описание</v8:content>
+														</v8:item>
+													</ToolTip>
+													<ExtendedTooltip name="РазделыГруппаОписаниеРасширеннаяПодсказка" id="32"/>
+													<ChildItems>
+														<InputField name="РазделыОписание" id="33">
+															<DataPath>Разделы.Описание</DataPath>
+															<EditMode>EnterOnInput</EditMode>
+															<VerticalStretch>true</VerticalStretch>
+															<Font ref="style:LargeTextFont" kind="StyleItem"/>
+															<ContextMenu name="РазделыОписаниеКонтекстноеМеню" id="34"/>
+															<ExtendedTooltip name="РазделыОписаниеРасширеннаяПодсказка" id="35"/>
+														</InputField>
+														<InputField name="РазделыВажныеДанные" id="36">
+															<DataPath>Разделы.ВажныеДанные</DataPath>
+															<EditMode>EnterOnInput</EditMode>
+															<Height>3</Height>
+															<VerticalStretch>true</VerticalStretch>
+															<Font ref="style:NormalTextFont" height="7" kind="StyleItem"/>
+															<ContextMenu name="РазделыВажныеДанныеКонтекстноеМеню" id="37"/>
+															<ExtendedTooltip name="РазделыВажныеДанныеРасширеннаяПодсказка" id="38"/>
+														</InputField>
+													</ChildItems>
+												</ColumnGroup>
+											</ChildItems>
+										</Table>
+									</ChildItems>
+								</UsualGroup>
+								<Pages name="ГруппаКнопкаОбновить" id="39">
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Группа кнопка обновить</v8:content>
+										</v8:item>
+									</Title>
+									<PagesRepresentation>None</PagesRepresentation>
+									<ExtendedTooltip name="ГруппаКнопкаОбновитьРасширеннаяПодсказка" id="40"/>
+									<ChildItems>
+										<Page name="Обычная" id="41">
+											<ToolTip>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Обычная</v8:content>
+												</v8:item>
+											</ToolTip>
+											<Group>Horizontal</Group>
+											<ExtendedTooltip name="ОбычнаяРасширеннаяПодсказка" id="42"/>
+											<ChildItems>
+												<CommandBar name="ГруппаКомандаОбновитьОбычная" id="47">
+													<Title>
+														<v8:item>
+															<v8:lang>ru</v8:lang>
+															<v8:content>Группа команда обновить обычная</v8:content>
+														</v8:item>
+													</Title>
+													<Width>3</Width>
+													<HorizontalStretch>false</HorizontalStretch>
+													<ExtendedTooltip name="ГруппаКомандаОбновитьОбычнаяРасширеннаяПодсказка" id="48"/>
+													<ChildItems>
+														<Button name="ОтправитьИПолучитьНижняяКнопка" id="49">
+															<Type>CommandBarButton</Type>
+															<Representation>Picture</Representation>
+															<Width>3</Width>
+															<CommandName>Form.Command.Синхронизировать</CommandName>
+															<Picture>
+																<xr:Ref>CommonPicture.КомандаОбновитьСписок</xr:Ref>
+																<xr:LoadTransparent>true</xr:LoadTransparent>
+															</Picture>
+															<ExtendedTooltip name="ОтправитьИПолучитьНижняяКнопкаРасширеннаяПодсказка" id="50"/>
+														</Button>
+													</ChildItems>
+												</CommandBar>
+												<LabelField name="ОписаниеПоследнегоОбновления" id="51">
+													<DataPath>ОписаниеПоследнегоОбновления</DataPath>
+													<TitleLocation>None</TitleLocation>
+													<Width>1</Width>
+													<Font ref="sys:DefaultGUIFont" kind="WindowsFont"/>
+													<ContextMenu name="ОписаниеПоследнегоОбновленияКонтекстноеМеню" id="52"/>
+													<ExtendedTooltip name="ОписаниеПоследнегоОбновленияРасширеннаяПодсказка" id="53"/>
+												</LabelField>
+											</ChildItems>
+										</Page>
+										<Page name="Внимание" id="43">
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Внимание</v8:content>
+												</v8:item>
+											</Title>
+											<ToolTip>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Внимание</v8:content>
+												</v8:item>
+											</ToolTip>
+											<Group>Horizontal</Group>
+											<ExtendedTooltip name="ВниманиеРасширеннаяПодсказка" id="44"/>
+											<ChildItems>
+												<CommandBar name="ГруппаКомандаОбновитьВнимание" id="54">
+													<Title>
+														<v8:item>
+															<v8:lang>ru</v8:lang>
+															<v8:content>Группа команда обновить внимание</v8:content>
+														</v8:item>
+													</Title>
+													<ToolTip>
+														<v8:item>
+															<v8:lang>ru</v8:lang>
+															<v8:content>Группа команда обновить внимание</v8:content>
+														</v8:item>
+													</ToolTip>
+													<Width>3</Width>
+													<HorizontalStretch>false</HorizontalStretch>
+													<ExtendedTooltip name="ГруппаКомандаОбновитьВниманиеРасширеннаяПодсказка" id="55"/>
+													<ChildItems>
+														<Button name="ОтправитьИПолучитьНижняяКнопкаВнимание" id="56">
+															<Type>CommandBarButton</Type>
+															<Representation>Picture</Representation>
+															<OnlyInAllActions>true</OnlyInAllActions>
+															<Width>3</Width>
+															<CommandName>Form.Command.Синхронизировать</CommandName>
+															<Picture>
+																<xr:Ref>CommonPicture.КомандаОбновитьВнимание</xr:Ref>
+																<xr:LoadTransparent>true</xr:LoadTransparent>
+															</Picture>
+															<ExtendedTooltip name="ОтправитьИПолучитьНижняяКнопкаВниманиеРасширеннаяПодсказка" id="57"/>
+														</Button>
+													</ChildItems>
+												</CommandBar>
+												<LabelField name="ОписаниеПоследнегоОбновленияВнимание" id="58">
+													<DataPath>ОписаниеПоследнегоОбновления</DataPath>
+													<TitleLocation>None</TitleLocation>
+													<Width>1</Width>
+													<Font ref="sys:DefaultGUIFont" kind="WindowsFont"/>
+													<ContextMenu name="ОписаниеПоследнегоОбновленияВниманиеКонтекстноеМеню" id="59"/>
+													<ExtendedTooltip name="ОписаниеПоследнегоОбновленияВниманиеРасширеннаяПодсказка" id="60"/>
+												</LabelField>
+											</ChildItems>
+										</Page>
+										<Page name="ВПроцессе" id="45">
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>В процессе</v8:content>
+												</v8:item>
+											</Title>
+											<ToolTip>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>В процессе</v8:content>
+												</v8:item>
+											</ToolTip>
+											<Group>Horizontal</Group>
+											<ExtendedTooltip name="ВПроцессеРасширеннаяПодсказка" id="46"/>
+											<ChildItems>
+												<PictureDecoration name="ДекорацияВПроцессе" id="61">
+													<Width>3</Width>
+													<Title formatted="false">
+														<v8:item>
+															<v8:lang>ru</v8:lang>
+															<v8:content>Декорация в процессе</v8:content>
+														</v8:item>
+													</Title>
+													<Picture>
+														<xr:Ref>CommonPicture.КомандаОбновитьВПроцессе</xr:Ref>
+														<xr:LoadTransparent>true</xr:LoadTransparent>
+													</Picture>
+													<FileDragMode>AsFile</FileDragMode>
+													<ContextMenu name="ДекорацияВПроцессеКонтекстноеМеню" id="62"/>
+													<ExtendedTooltip name="ДекорацияВПроцессеРасширеннаяПодсказка" id="63"/>
+												</PictureDecoration>
+												<LabelField name="ОписаниеПоследнегоОбновленияВПроцессе" id="64">
+													<DataPath>ОписаниеПоследнегоОбновления</DataPath>
+													<TitleLocation>None</TitleLocation>
+													<HorizontalAlign>Left</HorizontalAlign>
+													<VerticalAlign>Center</VerticalAlign>
+													<Width>1</Width>
+													<HorizontalStretch>true</HorizontalStretch>
+													<VerticalStretch>false</VerticalStretch>
+													<Font ref="sys:DefaultGUIFont" kind="WindowsFont"/>
+													<ContextMenu name="ОписаниеПоследнегоОбновленияВПроцессеКонтекстноеМеню" id="65"/>
+													<ExtendedTooltip name="ОписаниеПоследнегоОбновленияВПроцессеРасширеннаяПодсказка" id="66"/>
+												</LabelField>
+											</ChildItems>
+										</Page>
+									</ChildItems>
+								</Pages>
+							</ChildItems>
+						</Page>
+					</ChildItems>
+				</Pages>
+			</ChildItems>
+		</UsualGroup>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="Разделы" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Разделы</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>v8:ValueTable</v8:Type>
+			</Type>
+			<Columns>
+				<Column name="Картинка" id="1">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Картинка</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>v8ui:Picture</v8:Type>
+					</Type>
+				</Column>
+				<Column name="ИмяРаздела" id="2">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Имя раздела</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>50</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+				<Column name="Описание" id="3">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Описание</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>50</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+				<Column name="ВажныеДанные" id="4">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Важные данные</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>0</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+			</Columns>
+		</Attribute>
+		<Attribute name="ОписаниеПоследнегоОбновления" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Описание последнего обновления</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+			<SavedData>true</SavedData>
+		</Attribute>
+	</Attributes>
+	<Commands>
+		<Command name="Синхронизировать" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Синхронизировать</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Синхронизировать</v8:content>
+				</v8:item>
+			</ToolTip>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+	</Commands>
+</Form>
