@@ -142,9 +142,9 @@
 		<Metadata name="CommonPicture.РазделСписокЗаказов.Picture" id="ae4837a9-6b85-45ef-b937-a95dcd30891e.0" configVersion="c203588b3a978848b677836cbbfe6f8800000000"/>
 		<Metadata name="CommonPicture.Успех" id="6f2a40b3-daa2-4532-a9eb-f82aa706ff35" configVersion="b550cd6022f23c4f8f00c227bbcfdfe300000000"/>
 		<Metadata name="CommonPicture.Успех.Picture" id="6f2a40b3-daa2-4532-a9eb-f82aa706ff35.0" configVersion="9474bbd192c05342add8da306afee35100000000"/>
-		<Metadata name="Configuration.Финик" id="31399e98-ede2-40ce-886c-080f6759e03b" configVersion="2955b8e085c4c6459c7117346c6db10000000000"/>
+		<Metadata name="Configuration.Финик" id="31399e98-ede2-40ce-886c-080f6759e03b" configVersion="70b696b4f015944bb830b6f5c086ea8200000000"/>
 		<Metadata name="Configuration.Финик.HomePageWorkArea" id="1386661a-fcba-4a67-b11f-243e2f95a07f.8" configVersion="57b3bfaa8547024590f3b795c9baebf900000000"/>
-		<Metadata name="Configuration.Финик.ManagedApplicationModule" id="1386661a-fcba-4a67-b11f-243e2f95a07f.6" configVersion="2b534b59d52bc347ace90c8fe437989800000000"/>
+		<Metadata name="Configuration.Финик.ManagedApplicationModule" id="1386661a-fcba-4a67-b11f-243e2f95a07f.6" configVersion="170fa4f6688f4649bfd11f53758f021800000000"/>
 		<Metadata name="Constant.АдресЦентральнойБазы" id="22bb19f9-333f-4fe8-8996-33ebb5f56908" configVersion="cde97e53d6ebc34d9379c488ee62864b00000000"/>
 		<Metadata name="Constant.ИспользоватьТолькоWiFi" id="40d8f832-53c8-442f-ba39-ce333efce382" configVersion="789bc102c8d51442a539e40be8a190dc00000000"/>
 		<Metadata name="Constant.ИспользоватьФоновуюСинхронизацию" id="56a49830-7c9a-41af-9b61-a23e206c6a5f" configVersion="4f264142c9cfe54dae624c6aa26ed45f00000000"/>
